@@ -1,0 +1,94 @@
+{
+	"159446278": {
+		"manufacturername": "Kesuaheli",
+		"name": "Super Light",
+		"productname": "E1",
+		"state": {
+			"alert": "none",
+			"bri": 125,
+			"mode": "homeautomation",
+			"on": false,
+			"reachable": true
+		},
+		"swversion": "kesuhub-0.1.0",
+		"type": "Dimable light",
+		"uniqueid": "2C:F4:32:13:01:EA:00:11-04"
+	},
+	"159446279": {
+		"manufacturername": "Kesuaheli",
+		"modelid": "LWT010",
+		"name": "Super Cool Light",
+		"productname": "E2",
+		"state": {
+			"alert": "none",
+			"bri": 155,
+			"colormode": "ct",
+			"ct": 284,
+			"mode": "homeautomation",
+			"on": false,
+			"reachable": true
+		},
+		"swversion": "kesuhub-0.1.0",
+		"type": "Color temperature light",
+		"uniqueid": "2C:F4:32:13:01:EA:00:11-05"
+	},
+	"159446280": {
+		"manufacturername": "Kesuaheli",
+		"modelid": "LST001",
+		"name": "Super Color Light",
+		"productname": "E3",
+		"state": {
+			"alert": "none",
+			"bri": 160,
+			"colormode": "hs",
+			"hue": 0,
+			"mode": "homeautomation",
+			"on": false,
+			"reachable": true,
+			"sat": 0
+		},
+		"swversion": "kesuhub-0.1.0",
+		"type": "Color light",
+		"uniqueid": "2C:F4:32:13:01:EA:00:11-07"
+	},
+	"159446281": {
+		"state": {
+			"on": false,
+			"bri": 115,
+			"hue": 0,
+			"sat": 0,
+			"colormode": "hs",
+			"alert": "none",
+			"mode": "homeautomation",
+			"reachable": true
+		},
+		"type": "Color light",
+		"name": "Color Light",
+		"modelid": "LST001",
+		"manufacturername": "Kesuaheli",
+		"productname": "E3",
+		"uniqueid": "2C:F4:32:13:01:EA:00:11-07",
+		"swversion": "kesuhub-0.1.0"
+	},
+	"159446282": {
+		"manufacturername": "Kesuaheli",
+		"modelid": "LST001",
+		"name": "XY Light",
+		"productname": "E3",
+		"state": {
+			"alert": "none",
+			"bri": 62,
+			"colormode": "xy",
+			"mode": "homeautomation",
+			"on": false,
+			"reachable": true,
+			"xy": [
+				0.567,
+				0.56
+			]
+		},
+		"swversion": "kesuhub-0.1.0",
+		"type": "Color light",
+		"uniqueid": "2C:F4:32:13:01:EA:00:11-08"
+	}
+}
