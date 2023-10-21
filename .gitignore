@@ -1,0 +1,6 @@
+# testing files
+test.json
+test/
+
+# bin
+homeserver
