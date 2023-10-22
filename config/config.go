@@ -5,7 +5,10 @@ import (
 	"fmt"
 	"os"
 	"strings"
+	"sync"
 )
+
+var jsonMu sync.RWMutex
 
 // JSONSave saves a struct in a json file.
 //
@@ -15,6 +18,8 @@ import (
 func JSONSave(file, key string, data any) error {
 	fileData := make(map[string]any)
 
+	jsonMu.Lock()
+	defer jsonMu.Unlock()
 	if _, err := os.Stat(file); os.IsNotExist(err) {
 		// create dir of file
 		path := strings.Split(file, string(os.PathSeparator))
@@ -50,6 +55,8 @@ func JSONSave(file, key string, data any) error {
 //	 key  string the json key for indexing the data
 //	 data any    a pointer to the data to store in
 func JSONLoad(file, key string, data any) error {
+	jsonMu.RLock()
+	defer jsonMu.RUnlock()
 	buf, err := os.ReadFile(file)
 	if err != nil {
 		return err
@@ -73,6 +80,8 @@ func JSONLoad(file, key string, data any) error {
 // JSONKeys returns an empty slice and err = nil. For all other cases either the saved keys, or an
 // error is returned, but not both.
 func JSONKeys(file string) (keys []string, err error) {
+	jsonMu.RLock()
+	defer jsonMu.RUnlock()
 	buf, err := os.ReadFile(file)
 	if os.IsNotExist(err) {
 		return []string{}, nil
